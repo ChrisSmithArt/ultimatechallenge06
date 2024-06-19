@@ -1,0 +1,10 @@
+<% @customers.each do |customer|%>
+    <h3>Customer Name: <%=customer.FullName%></h3>
+    <ul>
+        <li>Email: <%=customer.EmailAddress%></li>
+        <li>Phone #: <%=customer.PhoneNumber%></li>
+    </ul>
+    <% if customer.image.representable? %>
+    <div><%= image_tag customer.image.representation(resize_to_limit: [100, 100])  %></div>
+    <% end%>
+<% end%>
