@@ -2,7 +2,8 @@
 <h2>Customers</h2>
 
 
+<%= render partial: "customer", collection: @customers %>
 
+  <li><%= link_to "Customers sorted by Name (Alphabetized)", "/customers/alphabetized" %></li>
 
-    
-<%= render "customers" %>
+  <li><%= link_to "Customers with no Email Address", "/customers/missing_email" %></li>
