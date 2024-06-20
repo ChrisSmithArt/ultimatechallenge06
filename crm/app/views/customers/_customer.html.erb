@@ -1,10 +1,11 @@
     
-    <h2>Customer!</h2>
-    <h3>Customer Name: <%=customer.FullName%></h3>
+<div class="bg-gray-100 p-8 rounded shadow-xl">
+    <h3 class="text-center prose"><%=customer.FullName%></h3>
     <ul>
-        <li>Email: <%=customer.EmailAddress%></li>
-        <li>Phone #: <%=customer.PhoneNumber%></li>
+        <li class="font-bold">Email: <%=customer.EmailAddress%></li>
+        <li class="font-bold">Phone #: <%=customer.PhoneNumber%></li>
     </ul>
     <% if customer.image.representable? %>
-    <div><%= image_tag customer.image.representation(resize_to_limit: [100, 100])  %></div>
+    <div class="mx-auto rounded"><%= image_tag customer.image.representation(resize_to_limit: [100, 100])  %></div>
     <% end%>
+</div>

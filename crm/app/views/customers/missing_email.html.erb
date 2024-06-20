@@ -1,7 +1,9 @@
-<h1>CRM</h1>
-<h2>Customers with no email</h2>
+<h2 class="prose mx-auto text-center">Customers with No Email!</h2>
 
-
+<div class="grid grid-rows-* grid-flow-col gap-4">
 <%= render partial: "customer", collection: @customers %>
+</div>
 
+<ul class="prose mx-auto text-center list-none font-bold pt-5">
   <li><%= link_to "Return to Main", "/customers/" %></li>
+</ul>
